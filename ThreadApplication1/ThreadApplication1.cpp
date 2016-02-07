@@ -9,7 +9,10 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	std::wcout << "‚±‚ñ‚É‚¿‚Í" << std::endl;
 
-	std::thread thread([](){ ; });
+	std::thread thread([](){
+	
+		std::wcout << "‚±‚ñ‚É‚¿‚Í by thread" << std::endl;
+	});
 
 	thread.join(); 
 
